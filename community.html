@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join the Community</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">YouCode Campus</div>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="campus.html">The Campus</a>
+            <a href="roadmap.html">Roadmap</a>
+            <a href="tools.html">Tools</a>
+            <a href="community.html">Join Us</a>
+        </div>
+    </div>
+
+    <h1>Join Us</h1>
+    
+    <!-- Form with deliberate accessibility errors (missing 'for', no WAI-ARIA) -->
+    <form action="#" class="community-form">
+        <div>
+            <label>Nom</label>
+            <input type="text" id="nom" required>
+        </div>
+        <div>
+            <!-- Missing 'for', mismatching id -->
+            <label>Prénom</label>
+            <input type="text" name="prenom" required>
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="email" required>
+        </div>
+        <div>
+            <label>Motivation</label>
+            <textarea required></textarea>
+        </div>
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <div class="footer">
+        <a href="#">Mentions Légales</a>
+    </div>
+</body>
+</html>

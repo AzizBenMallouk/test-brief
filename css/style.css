@@ -1,0 +1,102 @@
+/* Desktop-first CSS (simulating student mistake: not mobile-first) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.header .nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* Missing hamburger menu logic */
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #f4f4f4;
+}
+
+.cta {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+/* The Campus Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 10px;
+    padding: 20px;
+}
+.gallery-item {
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item1 { grid-column: 1 / 2; grid-row: 1 / 3; }
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer a {
+    color: white;
+}
+
+/* Community Form */
+.community-form div {
+    margin-bottom: 15px;
+}
+
+/* Incorrect use of :valid pseudo-class - will highlight empty inputs if not interacted with properly in some browsers, but mostly just a poorly designed valid state */
+input:valid {
+    border: 2px solid green;
+}
+input:invalid {
+    border: 2px solid red;
+}
+
+/* Broken Media Query for Mobile */
+@media screen and (max-width: 768px) {
+    .card-container {
+        /* student forgot to change flex-direction to column */
+        flex-wrap: wrap; 
+    }
+    .gallery {
+        /* forgot to update grid for mobile */
+    }
+}
